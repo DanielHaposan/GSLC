@@ -28,9 +28,6 @@ void insertData() {
     float gpa;
    
 
-    
-    
-
     do {
         System.out.print("Enter new student name: "); name = sc.nextLine();
     } while(name.length() <= 3 || name.length() > 12) ;
@@ -52,19 +49,15 @@ void insertData() {
 }
 
 
-
 void viewData(int printer) {
 
-          
-   
-
+        
     if(students.isEmpty()) {
         System.out.println("There is no student data");
       
         return;
     }
 
-    
     int counter = 0;
     
     
@@ -83,7 +76,6 @@ void viewData(int printer) {
 void deleteData() {
 
   
-    
     if(students.isEmpty()) {
         System.out.println("There's no employee!");
   
@@ -132,19 +124,13 @@ void searchData() {
     System.out.println("Enter Student Name");
     for(var i : students) {
         
-    
    
      String name = i.getName();
      name = sc.nextLine();
      
-     
-     
-
-     
      System.out.printf("Name: %s\nYear : %s\nGPA : %s\n  ", i.getName(), i.getYear(), i.getgpa());
      System.out.println();
      
-   
    
    }
     
@@ -156,7 +142,6 @@ void searchData() {
 void avg() {
 
   
-    
     if(students.isEmpty()) {
         System.out.println("There's no GPA");
         
@@ -177,7 +162,6 @@ void avg() {
 
     }
     
-
 
 public Main() {
     int choose = 0;
