@@ -122,21 +122,35 @@ void searchData() {
         return;
     }
     System.out.println("Enter Student Name");
+    int g = 0;
+    String find;
+    find = sc.nextLine();
     for(var i : students) {
-        
-   
-     String name = i.getName();
-     name = sc.nextLine();
-     
-     System.out.printf("Name: %s\nYear : %s\nGPA : %s\n  ", i.getName(), i.getYear(), i.getgpa());
-     System.out.println();
-     
-   
-   }
-    
+    	if(i.getName().equals(find)) {
+    		System.out.println();
+    		System.out.println("Student data");
+            System.out.println("Name: " + i.getName());
+            System.out.println("Year: " + i.getYear());
+            System.out.println("GPA: " + i.getgpa());
+          
+            g = 1;
+    		
+    		
+    		
+    	}
+    	 if(g == 0) {
+             System.out.println("Student data not available.");
+         }
+         System.out.println("Press Enter to Continue.");
+         sc.nextLine();
+         break;
+    	
+    	
+    }
+    }
   
     
-}
+
 
 
 void avg() {
